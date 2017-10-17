@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mercury</groupId>
+  <artifactId>MercuryAutomationSuite</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Mercury Edureka Automation</name>
+  <description>Edureka Certification Project</description>
+     <!-- <packaging>jar</packaging> -->
+  
+  
+  <!-- LIBRARY DEPENDENCIES -->
+  <dependencies>
+  
+    <!-- Selenium Java and WebDriver -->
+  	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.4.0</version>
+	</dependency>
+  
+    <!-- testNG 6.11  -->
+  	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>6.11</version>
+	    <scope>test</scope>
+	</dependency>	
+	
+	<!-- ReportNG 1.1.4 -->
+	<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+	<dependency>
+	    <groupId>org.uncommons</groupId>
+	    <artifactId>reportng</artifactId>
+	    <version>1.1.4</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!--Google Guice 4.0-->
+	<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+	<dependency>
+	    <groupId>com.google.inject</groupId>
+	    <artifactId>guice</artifactId>
+	    <version>4.0</version>
+	</dependency>
+  	
+  	<!-- Apache POI 3.16 -->
+  	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>3.16</version>
+	</dependency>
+    
+    <!-- Apache POI ooxml 3.16 -->
+    <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>3.16</version>
+	</dependency>	
+	
+	<!-- JavaMail API 1.5.0-b01 -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.5.0-b01</version>
+	</dependency>
+	
+	 
+   <!-- Maven Postman plugin 0.1.6 -->	 
+   <!-- https://mvnrepository.com/artifact/ch.fortysix/maven-postman-plugin -->   
+   <dependency>
+	    <groupId>ch.fortysix</groupId>
+	    <artifactId>maven-postman-plugin</artifactId>
+	    <version>0.1.6</version>
+	</dependency>
+  
+  </dependencies>
+  
+  
+  <!-- PLUG-INS -->
+  <build>  
+   <plugins>
+   <!-- Maven surefire report 2.20.1 and call the testng.xml from Maven -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20.1</version>
+        <configuration>
+            <properties>
+         	<!-- Setting ReportNG listeners -->
+         	    <property>
+         	    	<name>usedefaultlisteners</name>
+         	    	<value>false</value>
+         	    </property>
+	         	<property>
+	             	<name>listener</name> 
+	                	<value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+	            </property>
+         	</properties>        
+         
+         <suiteXmlFiles>
+         	<suiteXmlFile>testng.xml</suiteXmlFile>
+         </suiteXmlFiles>
+        </configuration>
+      </plugin>   
+      
+      
+        <!-- Post-Man plugin -->
+		 <plugin>
+			<groupId>ch.fortysix</groupId>
+			<artifactId>maven-postman-plugin</artifactId>
+			<executions>
+				<execution>				
+					<id>send a mail</id>
+					<phase>test</phase>
+					<goals>
+						<goal>send-mail</goal>
+					</goals>
+					<inherited>true</inherited>				
+					<configuration>					
+						<from>xyz@gmail.com</from>
+						<subject>Test Automation Report</subject>
+						<failonerror>true</failonerror>
+						<mailhost>smtp.gmail.com</mailhost>
+						<mailport>465</mailport>
+						<mailssl>true</mailssl>
+						<mailAltConfig>true</mailAltConfig>			
+						<mailuser>xyz@gmail.com</mailuser>
+						<mailpassword>abc</mailpassword>						
+						<receivers>						
+							<receiver>psvenkatesh1974@gmail.com</receiver>
+						</receivers>						
+						<fileSets>
+							<fileSet>						
+								<directory>${basedir}/target/surefire-reports/html</directory>
+							<includes>							
+								<include>overview.html</include>
+							</includes>						
+							</fileSet>
+						</fileSets>				
+				
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>      
+         
+    </plugins>      
+  </build>
+  
+  
+</project>

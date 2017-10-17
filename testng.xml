@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Mercury Test Automation Suite">
+	
+	<!-- Configure ReportNG Listeners -->
+<!-- <listeners>
+	<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners> -->
+
+  	<!-- Testcases -->
+  <test name="Book a Flight">
+	  <classes>
+	  		<class name="mercury.testcases.Login"/>
+	       <class name="mercury.testcases.BookFlight"/>    
+	   </classes>
+  </test>
+  
+  <test name="User Credential Validations">
+	  <classes>
+	       <class name="mercury.testcases.UserCredentialValidations"/>    
+	   </classes>
+  </test>
+  
+  
+  
+  <!-- EMAIL of the report is configured in pom.xml using postman plugin -->
+  
+  <!-- <test name="Email Test">
+  <classes>
+      <class name="mercury.testcases.EmailResults"/>      
+   </classes>
+  </test>-->
+  
+</suite>

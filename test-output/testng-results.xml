@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Negative test to check the credentials passed]]>
+    </line>
+    <line>
+      <![CDATA[Negative test to check the credentials passed]]>
+    </line>
+    <line>
+      <![CDATA[Negative test to check the credentials passed]]>
+    </line>
+    <line>
+      <![CDATA[Positive test to check the credentials passed]]>
+    </line>
+  </reporter-output>
+  <suite name="Mercury Test Automation Suite" duration-ms="12335" started-at="2017-09-19T15:32:29Z" finished-at="2017-09-19T15:32:41Z">
+    <groups>
+    </groups>
+    <test name="User Credential Validations" duration-ms="12335" started-at="2017-09-19T15:32:29Z" finished-at="2017-09-19T15:32:41Z">
+      <class name="mercury.testcases.UserCredentialValidations">
+        <test-method status="PASS" signature="setup()[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="setup" is-config="true" duration-ms="8001" started-at="2017-09-19T21:02:21Z" finished-at="2017-09-19T21:02:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="login" duration-ms="2811" started-at="2017-09-19T21:02:29Z" data-provider="excelData" finished-at="2017-09-19T21:02:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[xyz]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Negative test to check the credentials passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="login" duration-ms="2392" started-at="2017-09-19T21:02:32Z" data-provider="excelData" finished-at="2017-09-19T21:02:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xyz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Negative test to check the credentials passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="login" duration-ms="2321" started-at="2017-09-19T21:02:34Z" data-provider="excelData" finished-at="2017-09-19T21:02:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[xyz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Negative test to check the credentials passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="login" duration-ms="4195" started-at="2017-09-19T21:02:37Z" data-provider="excelData" finished-at="2017-09-19T21:02:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[mercury]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Positive test to check the credentials passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mercury.testcases.UserCredentialValidations@3c0f93f1]" name="tearDown" is-config="true" duration-ms="3139" started-at="2017-09-19T21:02:41Z" finished-at="2017-09-19T21:02:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- mercury.testcases.UserCredentialValidations -->
+    </test> <!-- User Credential Validations -->
+  </suite> <!-- Mercury Test Automation Suite -->
+</testng-results>

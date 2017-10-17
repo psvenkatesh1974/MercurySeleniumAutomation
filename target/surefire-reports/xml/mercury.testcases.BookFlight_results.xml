@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Book a Flight"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.677">
+  <properties />
+  
+  
+            <testcase name="selectFlight" time="1.562" classname="mercury.testcases.BookFlight" />
+                <testcase name="bookPurchase" time="2.872" classname="mercury.testcases.BookFlight" />
+                <testcase name="findFlight" time="2.243" classname="mercury.testcases.BookFlight" />
+      
+</testsuite>
